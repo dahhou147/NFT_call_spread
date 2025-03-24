@@ -1,0 +1,12 @@
+// Vous aurez besoin de déployer un token ERC20 mock pour servir de stablecoin
+// Exemple: créer un call spread (vous devrez adapter les paramètres)
+const buyer = accounts[2];
+const seller = accounts[1];
+const owner = accounts[0];
+const accounts = await ethers.getSigners();
+// Obtenir les comptes
+const keeper = await NFTCallSpreadKeeper.attach("0xe7f1725e7734ce288f8367e1bb143e90bb3f0512");
+const NFTCallSpreadKeeper = await ethers.getContractFactory("NFTCallSpreadKeeper");
+const nftCallSpread = await NFTCallSpread.attach("0x5fbdb2315678afecb367f032d93f642f64180aa3");
+const NFTCallSpread = await ethers.getContractFactory("NFTCallSpread");
+// Récupérer les contrats déployés

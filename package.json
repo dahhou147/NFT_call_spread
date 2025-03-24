@@ -1,0 +1,40 @@
+{
+  "name": "nft_call_spread",
+  "version": "1.0.0",
+  "description": "Système de gestion de call spreads financiers à l'aide de NFTs sur la blockchain BNB",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network bnbTestnet",
+    "deploy:keeper": "hardhat run scripts/deployKeeper.js --network bnbTestnet",
+    "setup:chainlink": "hardhat run scripts/setupChainlinkAutomation.js --network bnbTestnet",
+    "node": "hardhat node",
+    "deploy:local": "hardhat run scripts/deploy.js --network localhost",
+    "verify": "hardhat verify --network bnbTestnet",
+    "deploy:mumbai": "hardhat run scripts/deploy.js --network polygonMumbai",
+    "deploy:keeper:mumbai": "hardhat run scripts/deployKeeper.js --network polygonMumbai",
+    "verify:mumbai": "hardhat verify --network polygonMumbai"
+  },
+  "keywords": [
+    "blockchain",
+    "NFT",
+    "DeFi",
+    "options",
+    "call-spread",
+    "BNB",
+    "Chainlink"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@chainlink/contracts": "^0.6.1",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
